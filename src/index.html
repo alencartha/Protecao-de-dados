@@ -1,14 +1,54 @@
 <!DOCTYPE html>
+
 <html>
+
   <head>
     <meta charset="utf-8">
-    <title>Caesar Cipher</title>
+    <title>Proteção de Dados</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <div id="root">
-      <h1>Hello world!</h1>
+      <div id=banner>
+        <h1>SISTEMA DE PROTEÇÃO DE DADOS</h1>
+      </div>
+      <h2> De acordo com seu perfil, codifique ou decodifique os dados:</h2>
+      <div id=message>
+        <div id="formcode">
+          <p class="userprofile">PARA TITULARES:</p>
+          <input type="text" id="messageuser"/></p>
+          <h3>Selecione o deslocamento das letras:</h3>
+          <select id="offset">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+          </select>
+          <button id="buttonCipher">CLIQUE AQUI PARA CODIFICAR</button>
+          <h3>O dado codificado é: </h3>
+          <textarea id="textareaCoded"></textarea>
+          </div>
+        <div id="formdecode">
+          <p class="userprofile">PARA OPERADORES:</p>
+          <input type="text" id="messagecontrol"/></p>
+          <h3>Selecione o deslocamento das letras:</h3>
+          <select id="offset">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+          </select>
+          <button id="buttonDecipher">CLIQUE AQUI PARA DECODIFICAR</button>
+          <h3>O dado decodificado é: </h3>
+          <textarea id="textareaDecoded"></textarea>
+        </div> 
     </div>
-    <script src="index.js" type="module"></script>
+    <footer> <p>Desenvolvido por <a href=https://github.com/alencartha target="_blank">Alencartha</a> 2020 |© Todos os direitos reservados</p></footer>
+    <script src="index.js"></script>   
   </body>
+
 </html>
