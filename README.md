@@ -35,7 +35,7 @@ Nesse sentido, o Sistema de Proteção de Dados visa proteger os dados informado
 Neste primeiro momento, o protótipo da aplicação permitirá ao Titular inserir seus dados, ele informará ao Controlador a mensagem codificada e o offset e este passará esses dados ao Operador para que os dados sejam tratados.
 
 #### Fluxo do programa:
-![Fluxo do programa](https://github.com/alencartha/SAP005-cipher/blob/master/src/Fluxo.jpg)
+![Fluxo do programa](src/img/Fluxo.jpeg)
 
-![como o titular utilizará o programa](https://github.com/alencartha/SAP005-cipher/blob/master/src/Titulares.jpg)
-![como o operador utilizará o programa](https://github.com/alencartha/SAP005-cipher/blob/master/src/operadores.jpg)
+![como o titular utilizará o programa](src/img/Titulares.jpg)
+![como o operador utilizará o programa](src/img/operadores.jpg)
