@@ -8,7 +8,7 @@ body {
 
 #banner{
 
-    background-image: url(banner.jpeg);
+    background-image: url(img/banner.jpeg);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -61,7 +61,7 @@ p{
 
 }
 
-.userprofile{
+.user-profile{
     color:0F2A04;
     font-family: 'Montserrat', sans-serif;
     font-size: 22pt;
@@ -71,7 +71,7 @@ p{
 }
 
 
-#formcode {
+#div-cipher {
     background-color:#2A4722;
     float: left;
     margin-left: 110px;
@@ -79,14 +79,14 @@ p{
    
 }
 
-#formdecode {
+#div-decipher{
     background-color:#2A4722;
     float:right;
     margin-right:110px;
     box-shadow: -3px 3px 7px #71A363;
 }
 
-#messageuser{
+#message-user{
     padding: 9px;
     border-radius: 5px;
     margin-right: 50px;
@@ -94,7 +94,7 @@ p{
     width: 368px;
 }
 
-#messagecontrol{
+#message-control{
     padding: 9px;
     border-radius: 5px;
     margin-right: 50px;

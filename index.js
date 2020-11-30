@@ -8,8 +8,8 @@ buttonDecipher.addEventListener("click", decipher);
 
 function cipher () {
   
-  let textUser = document.getElementById("messageuser").value.toUpperCase();
-  let offset = Number(document.getElementById("offset").value);
+  let textUser = document.getElementById("message-user").value.toUpperCase();
+  let offset = Number(document.getElementById("offset-user").value);
   let codedWord ="";
 
   if(textUser==""){
@@ -20,7 +20,7 @@ function cipher () {
     let codeChar = textUser.charCodeAt(i);
 
     if (codeChar>= 48 && codeChar <= 57){
-      document.getElementById("messageuser").value=" "; 
+      document.getElementById("message-user").value=" "; 
       document.getElementById("textareaCoded").value=" ";   
       alert("Digite apenas letras");
     }
@@ -34,8 +34,8 @@ return codedWord;
 
 function decipher(){
   
-  let textUser = document.getElementById("messagecontrol").value.toUpperCase();
-  let offset = Number(document.getElementById("offset").value);
+  let textUser = document.getElementById("message-control").value.toUpperCase();
+  let offset = Number(document.getElementById("offset-control").value);
   let decodedWord ="";
 
   if(textUser==""){
@@ -46,7 +46,7 @@ function decipher(){
               
     let codeChar = textUser.charCodeAt(i);
     if (codeChar>= 48 && codeChar <= 57){
-      document.getElementById("messageuser").value=" "; 
+      document.getElementById("message-user").value=" "; 
       document.getElementById("textareaCoded").value=" ";   
       alert("Digite apenas letras");
     }
