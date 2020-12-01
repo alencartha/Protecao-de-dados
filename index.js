@@ -1,60 +1,34 @@
-const ASC = Number (65);
-const sizeAlphabet = Number(26);
+import cipher from './cipher.js'
+
+
 const buttonCipher = document.getElementById("buttonCipher");
-buttonCipher.addEventListener("click", cipher);
+buttonCipher.addEventListener("click", callEncode);
 const buttonDecipher = document.getElementById("buttonDecipher");
-buttonDecipher.addEventListener("click", decipher);
+buttonDecipher.addEventListener("click", callDecode);
 
 
-function cipher () {
-  
+function callEncode(){
   let textUser = document.getElementById("message-user").value.toUpperCase();
   let offset = Number(document.getElementById("offset-user").value);
-  let codedWord ="";
-
-  if(textUser==""){
-     alert("Digite os dados para serem Codificados");
+  if (textUser===""){
+      alert("Digite o texto para ser codificado");
   }
-
-  for (let i = 0; i < textUser.length; i++) {      
-    let codeChar = textUser.charCodeAt(i);
-
-    if (codeChar>= 48 && codeChar <= 57){
-      document.getElementById("message-user").value=" "; 
-      document.getElementById("textareaCoded").value=" ";   
-      alert("Digite apenas letras");
-    }
-    if (codeChar>= 65 && codeChar <= 90){
-      codedWord+=String.fromCharCode((codeChar- ASC + offset) % sizeAlphabet + ASC);
-      document.getElementById("textareaCoded").innerHTML=codedWord; 
-    } 
+  else{
+    let codedWord = cipher.encode(offset, textUser);
+    document.getElementById("textarea-coded").innerHTML=codedWord; 
   }
-return codedWord;
 }
 
-function decipher(){
-  
-  let textUser = document.getElementById("message-control").value.toUpperCase();
+function callDecode(){
+  let textControl = document.getElementById("message-control").value.toUpperCase();
   let offset = Number(document.getElementById("offset-control").value);
-  let decodedWord ="";
-
-  if(textUser==""){
-    alert("Digite os dedos para serem Decodificados");
+  if (textControl===""){
+    alert("Digite o texto para ser decodificado");
   }
-
-  for (let i = 0; i < textUser.length; i++) {
-              
-    let codeChar = textUser.charCodeAt(i);
-    if (codeChar>= 48 && codeChar <= 57){
-      document.getElementById("message-user").value=" "; 
-      document.getElementById("textareaCoded").value=" ";   
-      alert("Digite apenas letras");
-    }
-    if (codeChar>= 65 && codeChar <= 90){
-      decodedWord+= String.fromCharCode((codeChar- ASC - offset) % sizeAlphabet + ASC);
-      document.getElementById("textareaDecoded").innerHTML=decodedWord;
-    }
+  else{
+    let decodedWord = cipher.decode(offset, textControl);
+    document.getElementById("textarea-decoded").innerHTML=decodedWord; 
   }
-return decodedWord;
 }
+
 
