@@ -34,4 +34,8 @@ Nesse sentido, o Sistema de Proteção de Dados visa proteger os dados informado
 
 Neste primeiro momento, o protótipo da aplicação permitirá ao Titular inserir seus dados, ele informará ao Controlador a mensagem codificada e o offset e este passará esses dados ao Operador para que os dados sejam tratados.
 
+#### Fluxo do programa:
+![Fluxo do programa](src/img/Fluxo.jpg)
+
+
 
