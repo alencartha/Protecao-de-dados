@@ -15,7 +15,8 @@ function callEncode(){
   }
   else{
     let codedWord = cipher.encode(offset, textUser);
-    document.getElementById("textarea-coded").innerHTML=codedWord; 
+    document.getElementById("textarea-coded").innerHTML=codedWord;
+    clearInput()  
   }
 }
 
@@ -28,7 +29,16 @@ function callDecode(){
   else{
     let decodedWord = cipher.decode(offset, textControl);
     document.getElementById("textarea-decoded").innerHTML=decodedWord; 
+    clearInput()  
   }
 }
+
+function clearInput(){
+  document.querySelector("#message-control").value = "";
+  document.querySelector("#message-user").value = "";
+}
+
+
+
 
 

@@ -2,27 +2,29 @@
 
 <html>
 
-  <head>
-    <meta charset="utf-8">
-    <title>Proteção de Dados</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-      <header id="banner">
-        <h1>SISTEMA DE PROTEÇÃO DE DADOS</h1>
-      </header>
+<head>
+  <meta charset="utf-8" />
+  <title>Proteção de dados</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
 
-    <main>
+<body>
+  <header id="banner">
+    <h1>Sistema de Proteção de Dados</h1>
+  </header>
 
-      <section>
-        <h2> De acordo com seu perfil, codifique ou decodifique os dados:</h2>
-      </section>
+  <main>
+    <section>
+      <h2>De acordo com seu perfil, codifique ou decodifique os dados:</h2>
+    </section>
 
-      <section id="div-cipher">
+    <section class="container">
+
+      <section class="item-container">
         <p class="user-profile">PARA TITULARES:</p>
-        <input type="text" id="message-user"/>
+        <input type="text" class="message" id="message-user" placeholder="Digite aqui a mensagem para ser codificada..."/>
         <h3>Selecione o deslocamento das letras:</h3>
-        <select id="offset-user">
+        <select class="offset" id="offset-user">
           <option value="1">1</option>
           <option value="2">2</option>
           <option value="3">3</option>
@@ -30,16 +32,16 @@
           <option value="5">5</option>
           <option value="6">6</option>
         </select>
-        <button id="buttonCipher">CLIQUE AQUI PARA CODIFICAR</button>
-        <h3>O dado codificado é: </h3>
-        <textarea id="textarea-coded"></textarea>
+        <button class="btn" id="buttonCipher">CLIQUE AQUI PARA CODIFICAR</button>
+        <h3>O dado codificado é:</h3>
+        <textarea class="text-area" id="textarea-coded" disabled="true"></textarea>
       </section>
 
-      <section id="div-decipher">
+      <section class="item-container">
         <p class="user-profile">PARA OPERADORES:</p>
-        <input type="text" id="message-control"/>
+        <input type="text" class="message" id="message-control"  placeholder="Digite aqui a mensagem para ser decodificada..."/>
         <h3>Selecione o deslocamento das letras:</h3>
-        <select id="offset-control">
+        <select class="offset" id="offset-control">
           <option value="1">1</option>
           <option value="2">2</option>
           <option value="3">3</option>
@@ -47,14 +49,23 @@
           <option value="5">5</option>
           <option value="6">6</option>
         </select>
-        <button id="buttonDecipher">CLIQUE AQUI PARA DECODIFICAR</button>
-        <h3>O dado decodificado é: </h3>
-        <textarea id="textarea-decoded"></textarea>
-      </section>  
+        <button class="btn" id="buttonDecipher">CLIQUE AQUI PARA DECODIFICAR</button>
+        <h3>O dado decodificado é:</h3>
+        <textarea class="text-area" id="textarea-decoded" disabled="true"></textarea>
+      </section>
 
-    </main>
-    <footer> <p>Desenvolvido por <a href="https://github.com/alencartha" target="_blank">Alencartha</a> 2020 |© Todos os direitos reservados</p></footer>
-    <script src="index.js" type="module"></script>   
-  </body>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>
+      Desenvolvido por
+      <a href="https://github.com/alencartha" target="_blank">Alencartha</a>
+      2020 |© Todos os direitos reservados
+    </p>
+  </footer>
+  <script src="index.js" type="module"></script>
+</body>
 
 </html>
